@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title> BMI calculator </title>
+    </head>
+    <body>
+    <p> Please provide weight and height</p>
+    <form action ="/" method = "post">
+        <label for="weight">Weight (in kg)</label>
+        <input type="text" id="weight" placeholder="weight" name="weight"><br>
+
+        <label for="height">Height (in cm)</label>
+        <input type="text" id="height" placeholder= "height" name="height"><br>
+
+        <input type ="submit" value = "Calculate BMI">
+<!--        <input type ="reset" value = "clear">-->
+
+    </form>
+    {% if bmi %}
+    <label for-="BMI"> BMI </label>
+    <input type ="text" value ="{{bmi|round(2)}}" readonly>
+<!--    <h2> Your BMI is {{bmi|round(2)}}</h2>-->
+    {% endif %}
+    </body>
+</html>
