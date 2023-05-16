@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route("/", methods={"GET", "POST"})
 def bmi_endpoint():
+    bmi = 0
     if request.method == "POST":
         weight = int(request.form.get('weight', False))
         height = int(request.form.get('height', False))
@@ -13,7 +14,7 @@ def bmi_endpoint():
         # else:
         #     bmi = ''
         bmi = weight / (height / 100) ** 2
-        return render_template("bmi.html", bmi=bmi)
+    return render_template("bmi.html", bmi=bmi,weight = weight, height = height )
 
 
 @app.route("/greet/<name>")

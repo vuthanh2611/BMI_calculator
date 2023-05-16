@@ -6,13 +6,13 @@
     <p> Please provide weight and height</p>
     <form action ="/" method = "post">
         <label for="weight">Weight (in kg)</label>
-        <input type="text" id="weight" placeholder="weight" name="weight"><br>
+        <input type="text" id="weight" placeholder="weight" name="weight" value="{{weight}}"><br>
 
         <label for="height">Height (in cm)</label>
-        <input type="text" id="height" placeholder= "height" name="height"><br>
+        <input type="text" id="height" placeholder= "height" name="height" value ="{{height}}"><br>
 
         <input type ="submit" value = "Calculate BMI">
-<!--        <input type ="reset" value = "clear">-->
+        <input type ="reset" value = "clear">
 
     </form>
     {% if bmi %}
